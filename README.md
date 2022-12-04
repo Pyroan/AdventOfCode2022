@@ -1,3 +1,10 @@
+<sup>
+  <strong>Repos for Previous Events:</strong>
+  <a href=https://github.com/Pyroan/AdventOfCode2021>2021</a> |
+  <a href=https://github.com/Pyroan/AdventOfCode2020>2020</a> |
+  <a href=https://github.com/Pyroan/AdventOfCode2019>2019</a>
+</sup>
+
 # Advent Of Code 2022
 Tis the season.
 
