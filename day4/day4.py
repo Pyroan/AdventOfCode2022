@@ -12,6 +12,7 @@ with open('day4.txt') as f:
         # Other fun ways to write this:
         #   if a&b in[a,b]
         #   if a|b in[a,b]
+        #   if (a>a^b)+(a^b<b)
         if a <= b or a >= b:
             count += 1
 print(count)
