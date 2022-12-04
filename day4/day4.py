@@ -9,7 +9,9 @@ with open('day4.txt') as f:
             minimum, maximum = map(int, e)
             p[i] = set(range(minimum, maximum+1))
         a, b = p
-        # Other fun ways to write this: if a&b==a|b
+        # Other fun ways to write this:
+        #   if a&b in[a,b]
+        #   if a|b in[a,b]
         if a <= b or a >= b:
             count += 1
 print(count)
