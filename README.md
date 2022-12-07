@@ -16,4 +16,4 @@ Tis the season.
 - Day 5 (Combined): [282 bytes](day5/day5golf.py)
 - Day 6 (Combined): [100 bytes](day6/day6golf.py)
 
-[^1]: Under my personal rules for this, input must read from a file called "day\*.txt". Golfs can do one or both parts, which will be specified with the filename. If a golf computes both solutions, they can be printed either space-separated or on their own lines. Do not assume any properties of your input that aren't specified in the problem description (e.g. length of a line, etc.). Byte/Character counts come from `wc -cm`, and files have LF line endings. Wait is the plural of "Golf" "Golves"?
+[^1]: Under my personal rules for this, input must read from a file called "day\*.txt". Golfs can do one or both parts, which will be specified with the filename. If a golf computes both solutions, they can be printed either space-separated or on their own lines. Do not assume any properties of your input that aren't specified in the problem description (e.g. length of the input). Byte/Character counts come from `wc -cm`, and files have LF line endings. Wait is the plural of "Golf" "Golves"?

@@ -1,14 +1,6 @@
-# I know, I KNOW!
-# This is massively out of character for me!
-# Function declarations? Meaningful variable names? DOCSTRINGS?????
-# "What's gotten into her?", you say.
-#
-# And that's because you weren't here for Intcode.
-
 import json
 
-filesystem = {"/": {}}  # grinning like an idiot at having to do this
-# lmao. storing as a stack of references because why pretend
+filesystem = {"/": {}}
 wd = [filesystem["/"]]
 
 
@@ -33,10 +25,6 @@ def cd(d, wd=wd):
     elif d == '/':
         wd = filesystem['/']
     else:
-        # The problem statement doesn't guarantee
-        # that you'll only access dirs you already know about...
-        # However if we do access a dir we know it exists because
-        # we're reverse-engineering the filesystem
         wd.append(_touch(d))
 
 
@@ -62,16 +50,9 @@ def filtered_du(f, cond, l=0):
     return size, l
 
 
-#######################################################
-# We now return to your regularly scheduled spaghetti #
-#######################################################
 with open('day7.txt') as f:
     tty_output = f.read().split('$ ')[1:]
 
-# LET'S DO THIS
-# sickos.jpg
-# (sets up filesystem)
-mode = 0  # 0 for commands, 1 for output
 for l in tty_output:
     t = l.split()
     if t[0] == 'cd':
@@ -79,14 +60,6 @@ for l in tty_output:
     elif t[0] == 'ls':
         ls(t[1:])
 
-
-def pwd(): print(json.dumps(wd, indent=2))  # for debugging
-
-
-# weird bug where root isn't root even though the data is correct?
-wd = [filesystem["/"]]
-
-# _ is the total size of the first parameter, l is the size of everything that fits the condition.
 d, _ = filtered_du(filesystem, lambda x, _: x)
 unused = 70_000_000 - d
 must_free = 30_000_000 - unused

@@ -104,7 +104,7 @@ def smol_beans(f, l=0):
     return size, l
 
 
-# _ is the total size of the first parameter, l is the size of everything that fits the condition.
-_, s = filtered_du(filesystem,lambda size, total:total+size if size<100000 else total)
+# _ is the total size of the first parameter, s is the cumulative result second.
+_, s = filtered_du(filesystem, lambda size, total: total +
+                   size if size < 100000 else total)
 print(s)
-# print(sum(l.values()))
