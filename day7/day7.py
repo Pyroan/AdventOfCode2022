@@ -87,23 +87,6 @@ for l in tty_output:
     elif t[0] == 'ls':
         ls(t[1:])
 
-
-def smol_beans(f, l=0):
-    size = 0
-    # (get a list of all the smallest directories' sizes)
-    # (subdirectories will be included more than once! on purpose for some reason!)
-    if type(f) == dict:
-        for k, v in f.items():
-            s, l = smol_beans(v, l)
-            if s <= 100000 and type(v) == dict:
-                l += s
-            size += s
-            # print(f"{k}: {size}")
-    else:
-        size = f
-    return size, l
-
-
 # _ is the total size of the first parameter, s is the cumulative result second.
 _, s = filtered_du(filesystem, lambda size, total: total +
                    size if size < 100000 else total)
