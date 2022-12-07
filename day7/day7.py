@@ -24,14 +24,6 @@ def _touch(name, size=0, wd=wd):
     return wd[-1][name]
 
 
-def _du(f):
-    """Return total size of contents in `d`, including subdirectories"""
-    if type(f) == dict:
-        return sum(_du(file) for _, file in f.items())
-    else:
-        return f
-
-
 def cd(d, wd=wd):
     if d == '..':
         wd.pop()
