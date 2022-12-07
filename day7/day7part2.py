@@ -1,5 +1,3 @@
-import json
-
 filesystem = {"/": {}}
 wd = [filesystem["/"]]
 

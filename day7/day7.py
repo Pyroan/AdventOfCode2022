@@ -4,9 +4,6 @@
 # "What's gotten into her?", you say.
 #
 # And that's because you weren't here for Intcode.
-
-import json
-
 filesystem = {"/": {}}  # grinning like an idiot at having to do this
 # lmao. storing as a stack of references because why pretend
 wd = [filesystem["/"]]
