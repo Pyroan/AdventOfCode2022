@@ -22,7 +22,7 @@ def test_solution(day, style):
             )
             assert result.stderr == ''
             assert result.stdout.strip() == key[day][j]
-    elif style == 'golf':
+    elif style == "golf":
         # I'll need to fix this if I start separating the golfs by part again.
         result = subprocess.run(
             ['python', f'{day}golf.py'],
